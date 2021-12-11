@@ -1,6 +1,6 @@
 # PwChO_Zadanie-2_11.12.2021
 
-# Wersja Docker compose
+# Wersja docker-compose
 version: '3.7'
 # Wykorzystywane usługi 
 services:
@@ -37,7 +37,7 @@ services:
         networks:
             - backend
 # Serwer nginx przyłączony do sieci backend oraz frontend, port 6666 z zadania, służący do wyświetlenia pliku index.php 
-# (zawartość pliku index.php: phpinfo();  
+# (zawartość pliku index.php: funkcja phpinfo();  
       nginx_web:
          image: nginx:latest
          volumes:
@@ -58,5 +58,5 @@ networks:
   - backend:
   - frontend:
 
-Uruchomienie docker-compose.yml
+# Uruchomienie docker-compose.yml
 docker-compose up -d
