@@ -34,17 +34,17 @@ services:
             - backend
               
       nginx_web:
-           image: nginx:latest
-           volumes:
-                - ./templates:/etc/nginx/templates
-           ports:
-                - "6666:80"
-            environment:
-                - NGINX_HOST=index.php
-                - NGINX_PORT=6666
-            networks:
-                - backend
-                - frontend
+         image: nginx:latest
+         volumes:
+              - ./templates:/etc/nginx/templates
+         ports:
+              - "6666:80"
+          environment:
+              - NGINX_HOST=index.php
+              - NGINX_PORT=6666
+          networks:
+              - backend
+              - frontend
     
 volumes:
   mysql_db_data_container:
